@@ -14,3 +14,24 @@ struct SomethingView: View {
         Text("Hello world!")
     }
 }
+
+// this is how we trigger a canvas to see how a view looks like
+// a view can be a whole view of an app, or a small component, such
+// as Text
+// We could either use struct or class, but struct is a convention or
+// best practice in swift
+// Can be named anything, but follows the convention X_Previews
+// Xcode statically discovers types that conform to the PreviewProvider protocol
+// in your app, and generates previews for each provider it discovers.
+struct SomethingView_Previews: PreviewProvider {
+    static var previews: some View {
+        SomethingView()
+    }
+}
+
+// For example, we can have multiple PreviewProvider structs
+struct Whatever: PreviewProvider {
+    static var previews: some View {
+        SomethingView()
+    }
+}
