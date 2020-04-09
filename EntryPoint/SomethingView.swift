@@ -28,10 +28,3 @@ struct SomethingView_Previews: PreviewProvider {
         SomethingView()
     }
 }
-
-// For example, we can have multiple PreviewProvider structs
-struct Whatever: PreviewProvider {
-    static var previews: some View {
-        SomethingView()
-    }
-}
